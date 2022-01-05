@@ -21,5 +21,7 @@ createConnection()
     await connection.manager.save(post);
 
     console.log("Post has been saved: ", post);
+
+    await connection.close();
   })
   .catch((error) => console.log("Error: ", error));
